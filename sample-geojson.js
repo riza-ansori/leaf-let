@@ -15,7 +15,7 @@ var bicycleRental = {
                 "popupContent": "This is a B-Cycle Station. Come pick up a bike and pay by the hour. What a deal!",
                 "image" : "file:///D:/kerjaan/leaf-let/coffee-cup.jpg"
             },
-            "id": 51
+            "id": 1
         },
         {
             "geometry": {

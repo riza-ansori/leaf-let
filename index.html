@@ -56,7 +56,8 @@
 	
 </head>
 <body>
-
+	<div class="trigger-button" id="clicked-1">Clicked 1</div>
+	<div class="trigger-button" id="clicked-2">Clicked 2</div>
 	<div class="sidebar">
 		<div class="btnClose">x</div>
 		<img src="./" class="image"><br>
@@ -112,6 +113,21 @@
 				$(".contentPopup").html(feature.properties.popupContent);
 				$(".image").attr('src',feature.properties.image);
 			});
+
+			$("#clicked-1").on({'click': function(){
+				if (feature.id == 1){
+					$(".sidebar").show();
+					$(".nome").html(feature.properties.title);
+					$(".contentPopup").html(feature.properties.popupContent);
+					$(".image").attr('src',feature.properties.image);
+					console.log(feature.id);
+				}
+				else {
+					return false;
+					console.log("id not found");
+				}
+			}
+		});
 		}
 
 		var coorsLayer = L.geoJSON([bicycleRental], {
@@ -126,6 +142,7 @@
 				$(".sidebar").hide();
 			}
 		});
+		
 	</script>
 
 
